@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Skip Intro Button Presser",
+  "version": "1.0",
+  "description": "Automatically clicks the 'Skip Intro' button on streaming platforms.",
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.netflix.com/*", "*://*.disneyplus.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
