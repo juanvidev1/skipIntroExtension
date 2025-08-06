@@ -6,31 +6,64 @@
     <title>Skip Intro Toggle</title>
     <style>
       body {
-        font-family: Arial, sans-serif;
-        padding: 20px;
-        min-width: 200px;
+        font-family: "Segoe UI", "Roboto", Arial, sans-serif;
+        padding: 24px 18px;
+        min-width: 240px;
         text-align: center;
+        background: linear-gradient(135deg, #232526 0%, #414345 100%);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+        border-radius: 12px;
+        color: #eaeaea;
+      }
+      .desc {
+        margin-bottom: 18px;
+        color: #eaeaea;
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 0.2px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
       }
       #toggleButton {
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
+        padding: 12px 28px;
+        font-size: 17px;
+        font-weight: 600;
         border: none;
-        border-radius: 4px;
+        border-radius: 25px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+        background: #222;
+        color: #fff;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.2s;
+        outline: none;
       }
       #toggleButton.enabled {
-        background-color: #4caf50;
-        color: white;
+        background: linear-gradient(90deg, #0f9d58 0%, #00c6ff 100%);
+        color: #fff;
+        transform: scale(1.05);
+        box-shadow: 0 2px 12px rgba(0, 255, 255, 0.08);
       }
       #toggleButton:not(.enabled) {
-        background-color: #f44336;
-        color: white;
+        background: linear-gradient(90deg, #d7263d 0%, #ff6a00 100%);
+        color: #fff;
+        transform: scale(1);
+        box-shadow: 0 2px 12px rgba(255, 106, 0, 0.08);
+      }
+      #toggleButton:active {
+        transform: scale(0.97);
+      }
+      #toggleButton:disabled {
+        background: #444;
+        color: #888;
+        cursor: not-allowed;
+        box-shadow: none;
       }
     </style>
   </head>
   <body>
-    <h3>Skip Intro Extension</h3>
-    <button id="toggleButton">Loading...</button>
+    <div class="desc">
+      Activa o desactiva el salto automático de intros en tus videos favoritos:
+    </div>
+    <button id="toggleButton">Cargando...</button>
 
     <script src="popup.js"></script>
   </body>
